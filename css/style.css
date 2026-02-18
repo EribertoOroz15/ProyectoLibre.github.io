@@ -1,0 +1,333 @@
+/* =========================================
+   1. CONFIGURACIÓN GLOBAL Y VARIABLES
+   ========================================= */
+:root {
+    /* Colores Principales */
+    --bg-primary: #0f172a;       /* Fondo oscuro profundo */
+    --bg-secondary: #1e293b;     /* Fondo de tarjetas y header */
+    --accent-blue: #38bdf8;      /* Azul brillante (glow) */
+    
+    /* Colores de Texto */
+    --text-white: #f8fafc;       /* Texto principal */
+    --text-muted: #94a3b8;       /* Texto grisáceo/secundario */
+    --text-nav: #cbd5e1;         /* Color de los links */
+
+    /* Bordes y Sombras */
+    --border-soft: #1e293b;      /* Borde del header */
+    --border-accent: #334155;    /* Borde de tarjetas */
+    
+    /* Transiciones y Espaciado */
+    --transition-fast: 0.3s ease;
+}
+
+/* Aplicando variables al Body */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-white);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Aplicando variables al Botón de Tickets */
+.btn-tickets {
+    background-color: var(--accent-blue);
+    color: var(--bg-primary);
+    padding: 10px 20px;
+    border: 2px solid var(--accent-blue);
+    transition: all var(--transition-fast);
+}
+
+.btn-tickets:hover {
+    color: var(--accent-blue);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.6); /* Aquí puedes usar la variable también */
+    transform: translateY(-2px);
+}
+
+/* Aplicando variables a las Tarjetas */
+.card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-accent);
+    transition: transform var(--transition-fast);
+}
+
+.card:hover { 
+    border-color: var(--accent-blue); 
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0f172a;
+    color: #f8fafc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================================
+   2. HEADER Y NAVEGACIÓN
+   ========================================= */
+header {
+    background: #0f172a;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #1e293b;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    margin: 0;
+    font-size: 1.5em;
+    color: #f8fafc;
+    text-transform: uppercase;
+}
+
+.logo span {
+    color: #38bdf8;
+    font-weight: 300;
+}
+
+/* Menú de Navegación */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    display: flex;
+    align-items: center;
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s;
+    font-size: 0.9em;
+}
+
+.main-nav a:hover {
+    color: #38bdf8;
+    background: rgba(56, 189, 248, 0.1);
+}
+
+.nav-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    filter: invert(1); 
+}
+
+/* =========================================
+   3. HERO BANNER (Sección Principal)
+   ========================================= */
+.hero-banner {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(2, 6, 23, 0.9) 100%), 
+                url('../media/img/hero_banner.jpeg'); 
+    background-size: cover;   
+    background-position: center; 
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 140px 30px;         
+    margin-bottom: 40px;
+    border-bottom: 4px solid #38bdf8;
+}
+
+.hero-content h1 {
+    font-size: 4em;
+    margin: 0;
+    line-height: 1;
+    color: #f8fafc;
+}
+
+.hero-content span {
+    color: #38bdf8;
+    text-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
+}
+
+.dates {
+    font-size: 1.2em;
+    color: #cbd5e1;
+    letter-spacing: 2px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.slogan {
+    color: #94a3b8;
+    font-style: italic;
+}
+
+/* =========================================
+   4. COMPONENTES (Botones, Tarjetas)
+   ========================================= */
+
+/* Botón Tickets */
+.btn-tickets {
+    background-color: #38bdf8;
+    color: #0f172a;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    border: 2px solid #38bdf8;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+}
+
+.btn-tickets:hover {
+    background-color: transparent;
+    color: #38bdf8;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
+    transform: translateY(-2px);
+}
+
+/* Sistema de Tarjetas (Cards) */
+.card {
+    background: #1e293b;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 320px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    position: relative;
+    border: 1px solid #334155;
+}
+
+.card:hover { 
+    transform: translateY(-10px); 
+    border-color: #38bdf8; 
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #38bdf8;
+    color: #0f172a;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.product-img { width: 100%; height: 220px; object-fit: cover; }
+.card-content { padding: 20px; }
+.card-content h3 { font-size: 1.4em; margin: 0 0 10px 0; color: #f1f5f9; }
+.card-content p { font-size: 0.95em; color: #94a3b8; line-height: 1.5; margin: 0; }
+
+/* =========================================
+   5. CONTENEDORES Y SECCIONES
+   ========================================= */
+main { padding: 20px; }
+
+.section { 
+    margin-bottom: 80px; 
+    scroll-margin-top: 100px; 
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #f8fafc;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   6. REPRODUCTORES MULTIMEDIA (Audio/Video)
+   ========================================= */
+.media-player {
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.media-player:hover {
+    border-color: #38bdf8;
+}
+
+/* Personalización de Controles Webkit */
+video::-webkit-media-controls-current-time-display,
+video::-webkit-media-controls-time-remaining-display {
+    display: block !important;
+    color: #38bdf8 !important; 
+    font-weight: bold;
+}
+
+video::-webkit-media-controls-timeline {
+    background-color: rgba(56, 189, 248, 0.2);
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+video::-webkit-media-controls-play-button {
+    background-color: rgba(56, 189, 248, 0.1);
+    border-radius: 50%;
+}
+
+/* =========================================
+   7. FOOTER (Pie de página)
+   ========================================= */
+footer {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(2, 6, 23, 0.8) 100%), 
+                url('../media/img/Logo.jpeg'); 
+    background-size: contain;      
+    background-position: right bottom; 
+    background-repeat: no-repeat;  
+    text-align: left;
+    padding: 4rem 1rem;
+    margin-top: 80px;
+    border-top: 2px solid #38bdf8;
+    color: #94a3b8;
+    background-attachment: scroll; 
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-info p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+}
+
+.footer-credit {
+    font-weight: bold;
+    color: #38bdf8;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-top: 20px;
+    display: block;
+}
