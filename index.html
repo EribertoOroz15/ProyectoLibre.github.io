@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CROIX Ingeniería</title>
+    <link rel="icon" href="media/icons/Icono_Ventana.png" type="image/png">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="contenedor barra">
+            <a href="index.html" class="logo" style="display: flex; align-items: center;">
+                <img src="media/icons/LogoCroix.png" alt="Logo CROIX" style="height: 40px; margin-right: 10px;">
+                <div>CROIX <span>Ingeniería</span></div>
+            </a>
+
+            <button id="sidebarToggle" class="menu-movil-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="navegacion desktop-nav">
+                <a href="bienvenida.html">Inicio</a>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Marcas <i class="fas fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="#">Netzsch</a>
+                        <a href="#">Wilo</a>
+                        <a href="#">Debem</a>
+                        <a href="#">Q-Pumps</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Servicios <i class="fas fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="#">Mantenimiento de Bombas</a>
+                        <a href="#">Servicios Eléctricos</a>
+                        <a href="#">Obra Civil</a>
+                    </div>
+                </div>
+
+                <a href="#contacto" class="btn-nav-contacto">Contacto</a>
+            </nav>
+        </div>
+
+        <nav id="mobileMenu" class="mobile-nav-links">
+            <a href="bienvenida.html">Inicio</a>
+            <a href="#especialidades">Servicios</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-overlay">
+            <div class="hero-contenido">
+                <h1>Ingeniería y Mantenimiento Industrial</h1>
+                <p>Expertos en bombas, sistemas eléctricos y obra civil. Calidad e innovación para un mundo mejor.</p>
+                <div class="hero-botones">
+                    <a href="#contacto" class="boton boton-primario">Cotizar Proyecto</a>
+                    <a href="#especialidades" class="boton boton-secundario">Ver Servicios</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main id="especialidades" class="contenedor seccion">
+        <h2 class="titulo-seccion">Nuestras Especialidades</h2>
+
+        <div class="carrusel-contenedor">
+            <button class="carrusel-btn anterior" onclick="moverCarrusel(-1)">&#10094;</button>
+
+            <div class="carrusel-imagenes" id="carrusel">
+
+                <div class="slide">
+                    <div class="card-servicio">
+                        <div class="card-imagen">
+                            <img src="media/img/bombas-300x250.jpg" alt="Bombas">
+                        </div>
+                        <div class="card-texto">
+                            <h3>Mantenimiento de Bombas</h3>
+                            <p>Servicio preventivo y correctivo para equipos de bombeo industrial multimarca.</p>
+                            <a href="#" class="leer-mas">Leer más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="card-servicio">
+                        <div class="card-imagen">
+                            <img src="media/img/Electrico-300x250.jpg" alt="Eléctrico">
+                        </div>
+                        <div class="card-texto">
+                            <h3>Servicios Eléctricos</h3>
+                            <p>Instalaciones de media y baja tensión, subestaciones y control.</p>
+                            <a href="#" class="leer-mas">Leer más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="card-servicio">
+                        <div class="card-imagen">
+                            <img src="media/img/Obra-civil-300x250.jpg" alt="Obra Civil">
+                        </div>
+                        <div class="card-texto">
+                            <h3>Obra Civil</h3>
+                            <p>Construcción y adecuación de espacios industriales con altos estándares.</p>
+                            <a href="#" class="leer-mas">Leer más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="card-servicio">
+                        <div class="card-imagen">
+                            <img src="media/img/Tablaroca-300x250.jpg" alt="Tablaroca">
+                        </div>
+                        <div class="card-texto">
+                            <h3>Tablaroca y Acabados</h3>
+                            <p>Soluciones estéticas para interiores, muros divisorios y plafones.</p>
+                            <a href="#" class="leer-mas">Leer más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="card-servicio">
+                        <div class="card-imagen">
+                            <img src="media/img/sanitario-300x250.jpg" alt="Sanitario">
+                        </div>
+                        <div class="card-texto">
+                            <h3>Instalaciones Sanitarias</h3>
+                            <p>Diseño de sistemas hidrosanitarios eficientes y duraderos.</p>
+                            <a href="#" class="leer-mas">Leer más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="card-servicio">
+                        <div class="card-imagen">
+                            <img src="media/img/aires-acondicionados-300x250.jpg" alt="Aires Acondicionados">
+                        </div>
+                        <div class="card-texto">
+                            <h3>Aires Acondicionados</h3>
+                            <p>Instalación y mantenimiento de equipos de climatización industrial y comercial.</p>
+                            <a href="#" class="leer-mas">Leer más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <button class="carrusel-btn siguiente" onclick="moverCarrusel(1)">&#10095;</button>
+        </div>
+    </main>
+
+    <section class="contenedor seccion">
+        <h2 class="titulo-seccion">Conoce Nuestra Operación</h2>
+        <div class="video-contenedor">
+            <video controls width="100%" poster="media/img/poster-video.jpg" preload="auto">
+                <source src="media/video/CroixVideo.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+        </div>
+    </section>
+
+    <section id="contacto" class="seccion contacto-fondo">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">Contáctanos</h2>
+
+            <div class="tarjeta-contacto-wrapper">
+                <div class="info-contacto">
+                    <h3>Hablemos de tu proyecto</h3>
+                    <p>Estamos listos para ofrecerte soluciones integrales.</p>
+
+                    <div class="item-info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Lino #127 Col. Los Molinos</p>
+                    </div>
+                    <div class="item-info">
+                        <i class="fas fa-phone-alt"></i>
+                        <p>33-1343-4043</p>
+                    </div>
+                    <div class="item-info">
+                        <i class="fas fa-envelope"></i>
+                        <p>contacto@croixingenieria.com</p>
+                    </div>
+
+                    <div class="sociales-contacto">
+                        <a href="https://www.facebook.com/share/188rBh7F7Q/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <form id="formContacto" action="https://formspree.io/f/mvzbbakl" method="POST"
+                    class="formulario-contacto">
+                    <div class="campo">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="campo">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="tucorreo@empresa.com" required>
+                    </div>
+                    <div class="campo">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" placeholder="¿En qué podemos ayudarte?"
+                            required></textarea>
+                    </div>
+
+                    <input type="submit" value="Enviar Mensaje" class="boton-enviar">
+                    <p id="formStatus" style="display: none; text-align: center; margin-top: 15px; font-weight: bold;">
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" style="position: relative; overflow: hidden;">
+        <img src="media/icons/LogoCroix.png" alt="Fondo Croix"
+            style="position: absolute; right: -50px; bottom: -50px; width: 300px; opacity: 0.05; pointer-events: none;">
+
+        <div class="contenedor footer-grid" style="position: relative; z-index: 1;">
+
+            <div class="footer-col">
+                <h3 class="footer-logo" style="display: flex; align-items: center;">
+                    <img src="media/icons/LogoCroix.png" alt="Logo Footer">
+                    CROIX <span>Ingeniería</span>
+                </h3>
+                <p>Comprometidos con la innovación y la calidad en cada servicio industrial que ofrecemos.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="bienvenida.html">Inicio</a></li>
+                    <li><a href="#especialidades">Servicios</a></li>
+                    <li><a href="#">Aviso de Privacidad</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <p><i class="fas fa-phone"></i> 33-1343-4043</p>
+                <p><i class="fas fa-envelope"></i> contacto@croixingenieria.com</p>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/share/188rBh7F7Q/" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/523313434043" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright" style="position: relative; z-index: 1;">
+            <p>&copy; 2026 CROIX Ingeniería. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/523313434043" class="btn-whatsapp-flotante" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="JavaScript/app.js"></script>
+</body>
+
+</html>
